@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define color variables */
+:root {
+  --background: #f0f4f8; /* Light background */
+  --foreground: #1f2937; /* Dark text color */
+  --primary: #3b82f6; /* Primary color (blue) */
+  --secondary: #f97316; /* Secondary color (orange) */
+  --accent: #10b981; /* Accent color (green) */
+  --muted: #9ca3af; /* Muted text color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1f2937; /* Dark background */
+    --foreground: #e5e7eb; /* Light text color */
+    --primary: #60a5fa; /* Lighter primary color */
+    --secondary: #fb923c; /* Lighter secondary color */
+    --accent: #34d399; /* Lighter accent color */
+    --muted: #d1d5db; /* Lighter muted text color */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6; /* Improved line height for readability */
+}
+
+/* Additional styles for links and buttons */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
